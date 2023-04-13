@@ -1,0 +1,39 @@
+    <script>
+    
+        function send_request(url, element, options){
+
+            fetch(url)
+              .then( async (response) => {
+                let data = await response.text();
+                document.getElementById(element).innerHTML = data;
+              })
+              .catch((err) => {
+                  alert(err);
+              })
+        }
+
+        document.onreadystatechange = function () {
+
+            if (document.readyState == "complete") {
+
+                let options = {
+                    method: 'GET',
+                    headers: {}
+                };
+                send_request('sidebar', 'pgside', options);
+            }
+        }
+
+        function action(url, element, options){
+
+            fetch(url)
+              .then( async (response) => {
+                let data = await response.text();
+                document.getElementById(element).innerHTML = data;
+              })
+              .catch((err) => {
+                  alert(err);
+              })
+        }
+    </script>  
+</html>

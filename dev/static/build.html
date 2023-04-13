@@ -1,0 +1,53 @@
+<html>
+    <head><title>{}</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="simple-grid.min.css">
+    <style>
+
+    </style>
+    </head><body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          test<!-- This content will take up 3/12 (or 1/4) of the container -->
+        </div>
+        <div class="col-4">
+          test<!-- This content will take up 3/12 (or 1/4) of the container -->
+        </div>
+        <div class="col-4-sm">
+          test<!-- This content will take up 6/12 (or 1/2) of the container -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 center">
+          test2<!-- This content will take up 3/12 (or 1/4) of the container -->
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
+<script>
+
+    function send_request(url, options){
+        fetch('/' + url, options)
+        .then(response => response.json())
+        .then(body => {
+        // Do something with body
+        });
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+
+            let options = {
+                method: 'GET',
+                headers: {}
+            };
+
+            send_request('_ldr', options);
+            send_request('_dht22', options);
+
+        }
+    }
+
+</script>
