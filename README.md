@@ -4,7 +4,7 @@
 
 ### Current Webserver API (current_webserver_api)
 
-	| Features | Description |
+| Features | Description |
 | ----------- | ----------- |
 | Webserver | Creates a stand alone webserver and AP that you need to log into before accessing the device API |
 | Sensors | Want it to be configurable for as many sensors as possible |
